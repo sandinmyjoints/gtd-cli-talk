@@ -387,7 +387,22 @@ If you can reproduce the problem, you can fix it.
 
 ## Bash functions
 
-- Example: `greplog`
+Example: `greplog`
+
+    # usage: greplog <logprefix> <pattern>
+    #
+    # When there's a lot, use with head -n to grab n lines:
+    #
+    # $ greplog suggest '"warning"' | head -n 30
+    #
+    greplog () {
+      {
+          nice zcat $(ls -rt $1.log.*.gz || ls /dev/null)  # Matches <prefix>.log.XXXX.gz
+          nice cat $(ls -rt $1.*[0-9] || ls /dev/null) # Matches <prefix>.log.X
+          nice cat $(ls $1.log || ls /dev/null)  # Matches <prefix>.log
+      } | nice egrep "$2"
+    }
+
 
 --
 
