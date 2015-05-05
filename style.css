@@ -1,0 +1,47 @@
+h2 {
+  font-size: 140%;
+  line-height: 1.2;
+  border-bottom: 0;
+  margin: 0;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 120%;
+  line-height: 1.2;
+  border-bottom: 0;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+pre {
+  font-size: 90%;
+  line-height: 1.3;
+  background: #FFF;
+}
+
+li {
+  font-size: 80%;
+}
+
+.slide-content {
+  margin-top: 20px;
+  width: 1000px;
+  height: 800px;
+}
+
+td {
+  border-bottom: 1px solid #CCC;
+}
+
+td:first-child {
+  width: 40%;
+  font-size: 70%;
+}
+
+td:last-child {
+  width: 60%;
+  font-size: 80%;
+  padding-left: 16px;
+}
